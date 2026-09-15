@@ -1,36 +1,182 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Siswa - Next.js
 
-## Getting Started
+Website portfolio siswa yang dikembangkan menggunakan Next.js, TypeScript, React, dan Tailwind CSS.
 
-First, run the development server:
+Project ini merupakan pengembangan lanjutan dari Tugas 1 dengan penambahan styling responsif, reusable components, interaktivitas, pencarian dan filter project, dark mode, dynamic routing, serta halaman 404.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Deskripsi Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Website ini dibuat sebagai portfolio untuk menampilkan informasi mengenai diri saya, skills yang sedang dipelajari, project yang telah dibuat, serta informasi kontak.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pada pengembangan lanjutan ini, website diperbarui agar memiliki tampilan yang lebih modern, responsif, interaktif, dan mudah dikembangkan.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Website terdiri dari beberapa bagian utama:
 
-## Learn More
+- Home
+- Skills
+- About
+- Projects
+- Contact
+- Footer
 
-To learn more about Next.js, take a look at the following resources:
+Selain halaman utama, terdapat juga halaman About yang lebih lengkap dan halaman detail project menggunakan dynamic routing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Teknologi yang Digunakan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Teknologi yang digunakan dalam project ini:
 
-## Deploy on Vercel
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+- Figma
+- Supabase
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Penambahan Fitur
+
+Pada pengembangan lanjutan project, beberapa fitur telah ditambahkan dan diperbarui.
+
+## 1. Tailwind CSS Styling
+
+Tailwind CSS digunakan untuk mengatur tampilan website menggunakan utility classes.
+
+Beberapa styling yang diterapkan antara lain:
+
+- Responsive layout
+- Flexbox
+- CSS Grid
+- Spacing dan padding
+- Typography
+- Border dan border radius
+- Shadow
+- Hover effect
+- Dark mode
+- Responsive breakpoint
+- Background grid
+- Animasi
+- Transition
+
+Website dibuat dengan pendekatan mobile-first sehingga tampilan dapat menyesuaikan ukuran layar smartphone, tablet, maupun desktop.
+
+Breakpoint yang digunakan antara lain:
+
+- `sm:`
+- `md:`
+- `lg:`
+- `xl:`
+
+Beberapa elemen juga diberikan efek interaksi seperti:
+
+- `hover:-translate-y-1`
+- `hover:shadow-lg`
+- `transition-all`
+- `duration-300`
+
+Tujuannya agar tampilan website menjadi lebih interaktif dan tidak terlalu statis.
+
+---
+
+# Components
+
+Kode website dipisahkan menjadi beberapa reusable component agar struktur project lebih rapi, mudah dibaca, dan mudah dikembangkan.
+
+Beberapa component yang digunakan:
+
+## Navbar
+
+File:
+
+`src/component/navbar.tsx`
+
+Navbar digunakan sebagai navigasi utama website.
+
+Navbar memiliki menu:
+
+- Home
+- Skills
+- About
+- Projects
+- Contact
+
+Navbar juga memiliki:
+
+- Active section indicator
+- Light Mode
+- Dark Mode
+- Responsive navigation
+
+Indikator aktif digunakan untuk menunjukkan section yang sedang dibuka atau dilihat oleh pengguna.
+
+## Hero
+
+File:
+
+`src/component/hero.tsx`
+
+Component Hero digunakan sebagai bagian utama halaman Home.
+
+Hero berisi:
+
+- Perkenalan
+- Judul utama
+- Deskripsi singkat
+- Link atau tombol menuju bagian About
+- Social media
+
+Hero dibuat responsif agar dapat menyesuaikan tampilan desktop dan mobile.
+
+## About
+
+File:
+
+`src/component/about.tsx`
+
+Component About digunakan untuk menampilkan informasi singkat mengenai diri saya.
+
+Bagian About pada halaman utama berisi deskripsi singkat mengenai:
+
+- Saya sebagai Software Engineering student
+- Ketertarikan terhadap programming
+- Ketertarikan terhadap web development
+- Proses belajar dan pengembangan kemampuan
+
+Terdapat juga tombol:
+
+`Selengkapnya Tentang Saya`
+
+yang mengarahkan pengguna menuju halaman About yang lebih lengkap.
+
+## CounterApresiasi
+
+File:
+
+`src/component/CounterApresiasi.tsx`
+
+Component ini merupakan Client Component yang menggunakan `useState`.
+
+Fungsinya adalah menyediakan tombol apresiasi yang dapat diklik oleh pengguna.
+
+Setiap tombol diklik, jumlah apresiasi akan bertambah.
+
+Contoh:
+
+`0 → 1 → 2 → 3 → ...`
+
+Fitur ini digunakan sebagai contoh penerapan interaktivitas pada website menggunakan React State.
+
+## Badge
+
+File:
+
+`src/component/Badge.tsx`
+
+Badge digunakan untuk menampilkan label kategori dan status Featured pada project.
+
+Component ini menggunakan TypeScript interface untuk menerima props berupa text.
+
+Contoh penggunaan:
+
+```tsx
+<Badge text="Web Development" />
