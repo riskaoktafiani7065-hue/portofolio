@@ -62,7 +62,7 @@ export default function About() {
               href="/about"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/20"
             >
-              Selengkapnya Tentang Saya
+              More About Me
               <span>→</span>
             </a>
           </div>

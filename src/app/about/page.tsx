@@ -127,7 +127,7 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                  Listening to music helps me relax and enjoy my free time.
+                  Listening to music helps me relax and is one of my companions while studying. Music makes me feel more comfortable and focused when I am doing something.
                 </p>
               </div>
 
@@ -142,8 +142,7 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                  Watching movies and series is one of my favorite ways to
-                  spend my free time.
+                  I like watching Korean dramas, and sometimes I also watch anime. Watching Korean dramas is one of my favorite ways to spend my free time.
                 </p>
               </div>
 
@@ -158,8 +157,7 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                  Reading helps me discover new information and learn new
-                  things.
+                  I like reading AU (Alternate Universe) because the stories are interesting and entertaining. Reading AU is also one of the ways I enjoy spending my free time.
                 </p>
               </div>
 
@@ -174,8 +172,7 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                  Capturing interesting moments and memories through
-                  photography.
+                  I like taking pictures of food because I enjoy capturing food in an attractive way. Taking pictures of food is also something I enjoy when I am eating or trying new food.
                 </p>
               </div>
 
