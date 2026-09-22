@@ -180,3 +180,21 @@ Contoh penggunaan:
 
 ```tsx
 <Badge text="Web Development" />
+
+## Supabase Database
+
+Pada Module 3, project portfolio ini mulai menggunakan Supabase sebagai database untuk menyimpan data proyek.
+
+### Table: `proyek`
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | int8 | Primary key, dibuat otomatis |
+| `created_at` | timestamp | Waktu data dibuat |
+| `judul` | text | Judul proyek |
+| `deskripsi` | text | Deskripsi proyek |
+| `teknologi` | text | Teknologi yang digunakan |
+| `link` | text | Link proyek, dapat bernilai kosong |
+
+Data pada tabel `proyek` ditampilkan pada halaman `/proyek` menggunakan Supabase Client.
+RLS (Row Level Security) diaktifkan dan dibuat policy untuk mengizinkan akses baca data.

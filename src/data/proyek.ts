@@ -41,26 +41,4 @@ export const proyek: Proyek[] = [
     tech: ["Next.js", "JavaScript", "Supabase"],
     featured: true,
   },
-
-  {
-    id: "web-berita",
-    title: "Web Berita",
-    category: "Web Development",
-    description:
-      "A simple news website built using HTML and Tailwind CSS to display information in a responsive and engaging way.",
-    image: "/web berita.png",
-    tech: ["HTML", "Tailwind CSS"],
-    featured: false,
-  },
-
-  {
-    id: "mietime",
-    title: "MieTime",
-    category: "UI/UX",
-    description:
-      "A practical and user-friendly noodle ordering app design that helps users select menu items and track their orders.",
-    image: "/logo mie.png",
-    tech: ["Figma"],
-    featured: true,
-  },
 ];

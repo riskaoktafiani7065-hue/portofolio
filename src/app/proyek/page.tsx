@@ -1,93 +1,77 @@
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { proyek } from "@/data/proyek";
+import CardProyek from "@/component/CardProyek";
+import Link from "next/link"
+import { supabase } from "@/../lib/supabase";
 
-export default async function ProjectDetail({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
+interface Project {
+  id: number;
+  created_at: string;
+  judul: string;
+  deskripsi: string;
+  teknologi: string | null;
+  link: string | null;
+  category: string | null;
+  image: string | null;
+  featured: boolean | null;
+}
 
-  const project = proyek.find((item) => item.id === id);
+export default async function ProyekPage() {
+  const { data: daftarProyek, error } = await supabase
+    .from("proyek")
+    .select("*")
+    .order("id", { ascending: true });
 
-  // Jika project tidak ditemukan
-  if (!project) {
-    notFound();
+  if (error) {
+    return (
+      <main className="py-6">
+        <p className="text-red-600">
+          Gagal memuat data: {error.message}
+        </p>
+      </main>
+    );
   }
 
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-6 py-16 dark:bg-[#090d14] md:px-12 lg:px-20">
-      <div className="mx-auto max-w-6xl">
+    <main className="py-6 space-y-6">
 
-        {/* BACK */}
-        <Link
-          href="/#project"
-          className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
-        >
-          ← Back to Projects
-        </Link>
+    <div className="flex flex-col gap-4 md:relative md:flex-row md:items-center md:justify-center">
+  <Link
+    href="/"
+    className="inline-flex w-fit items-center gap-4 rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 md:absolute md:left-3"
+  >
+    ← Back to Home
+  </Link>
 
-        {/* HEADER */}
-        <div className="mb-10">
-          <span className="rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
-            {project.category}
-          </span>
+      <h1 className="text-center text-3xl font-extrabold text-slate-900 dark:text-white">
+        Daftar Karya & Proyek Siswa
+      </h1>
+    </div>
+    
+      <div className="grid grid-cols-1 gap-6 pt-2 md:grid-cols-2 lg:grid-cols-3">
 
-          <h1 className="mt-5 text-5xl font-black text-gray-900 dark:text-white md:text-6xl">
-            {project.title}
-          </h1>
-
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-500 dark:text-gray-400">
-            {project.description}
-          </p>
-        </div>
-
-        {/* IMAGE */}
-        <div className="relative h-80 overflow-hidden rounded-3xl bg-white shadow-lg dark:bg-[#111217] md:h-125">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
+        {daftarProyek?.map((item: Project) => (
+          <CardProyek
+            key={item.id}
+            id={item.judul
+              .toLowerCase()
+              .trim()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "")}
+            title={item.judul}
+            category={item.category || "Project"}
+            description={item.deskripsi}
+            image={item.image || ""}
+            tech={
+              item.teknologi
+                ?.split(",")
+                .map((tech) => tech.trim())
+                .filter(Boolean) ?? []
+            }
+            featured={item.featured ?? false}
           />
-        </div>
+        ))}
 
-        {/* INFORMATION */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-
-          {/* ABOUT */}
-          <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-[#111217]">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-              About Project
-            </h2>
-
-            <p className="mt-3 leading-7 text-gray-500 dark:text-gray-400">
-              {project.description}
-            </p>
-          </div>
-
-          {/* TECHNOLOGIES */}
-          <div className="rounded-2xl bg-white p-6 shadow-sm dark:bg-[#111217]">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-              Technologies
-            </h2>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.tech.map((technology) => (
-                <span
-                  key={technology}
-                  className="rounded-full bg-gray-100 px-4 py-2 text-sm text-gray-600 dark:bg-gray-800 dark:text-gray-300"
-                >
-                  {technology}
-                </span>
-              ))}
-            </div>
-          </div>
-
-        </div>
       </div>
+
     </main>
   );
 }

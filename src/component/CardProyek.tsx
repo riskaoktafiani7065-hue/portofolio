@@ -22,7 +22,7 @@ export default function CardProyek({
   featured = false,
 }: CardProyekProps) {
   return (
-    <Link href={`/project/${id}`} className="group block">
+    <Link href={`/proyek/${id}`} className="group block">
       <article className="overflow-hidden rounded-2xl border border-blue-100 bg-white/80 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 dark:border-gray-800 dark:bg-[#111217]/90 dark:hover:border-blue-800">
 
         {/* IMAGE */}

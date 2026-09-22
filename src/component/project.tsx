@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { proyek } from "../data/proyek";
 import CardProyek from "./CardProyek";
+import Link from "next/link";
 
 export default function Project() {
   const [search, setSearch] = useState("");
@@ -26,7 +27,7 @@ export default function Project() {
   return (
     <section
       id="project"
-      className="relative min-h-screen overflow-hidden scroll-mt-24 px-8 py-5 md:px-12 lg:px-16"
+      className="relative min-h-screen overflow-hidden scroll-mt-24 px-6 pt-3 pb-3 md:px-12 lg:px-16"
     >
       {/* BACKGROUND GLOW */}
       <div className="pointer-events-none absolute left-1/4 top-20 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
@@ -115,6 +116,19 @@ export default function Project() {
             featured={project.featured}
           />
         ))}
+
+        {/* VIEW ALL */}
+        <div className="flex min-h-35 translate-x-100 items-center justify-center">
+          <Link
+            href="/proyek"
+            className="group inline-flex items-center gap- rounded-full bg-blue-600 px-8 py-5 text-2xl font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl"
+          >
+            View All
+            <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+        </div>
       </div>
 
       {/* EMPTY RESULT */}
