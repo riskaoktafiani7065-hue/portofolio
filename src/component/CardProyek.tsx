@@ -28,9 +28,9 @@ export default function CardProyek({
         {/* IMAGE */}
         <div className="relative mb-5 h-48 overflow-hidden rounded-xl bg-blue-50 dark:bg-[#181a21]">
           <Image
-            src={image}
-            alt={title}
-            fill
+              src={image || "/images/default-project.jpg"}
+              alt={title}
+              fill
             className="object-cover transition duration-500 group-hover:scale-105"
           />
 
