@@ -36,7 +36,7 @@ export default async function AdminLayout({
       <Sidebar logout={logout} />
 
       {/* CONTENT */}
-      <main className="ml-64 min-h-screen">
+      <main className="min-h-screen pt-16 md:ml-64 md:pt-0">
         {children}
       </main>
 
