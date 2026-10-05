@@ -166,6 +166,7 @@ export default async function ProjectDetail({
               src={project.image}
               alt={project.judul}
               fill
+              sizes="(max-width: 768px) 100vw, 1152px"
               className="object-cover"
             />
           ) : (

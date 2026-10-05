@@ -172,6 +172,7 @@ export default function Hero() {
                 src="/fotokuu.jpeg"
                 alt="Foto profil Riskaa Oktafiani"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
                 className="object-cover"
               />

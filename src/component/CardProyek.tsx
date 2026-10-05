@@ -31,6 +31,7 @@ export default function CardProyek({
               src={image || "/images/default-project.jpg"}
               alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition duration-500 group-hover:scale-105"
           />
 
