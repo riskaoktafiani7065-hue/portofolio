@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Riskaa Oktafiani Portfolio";
+export const alt = "Riskaa Oktafiani Portofolio";
 export const size = {
   width: 1200,
   height: 630,
@@ -42,7 +42,7 @@ export default function Image() {
             fontSize: 32,
           }}
         >
-          Website Profil & Portonpm run devfolio
+          Website Profil & Portofolio
         </div>
 
         <div

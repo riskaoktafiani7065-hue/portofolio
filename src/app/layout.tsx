@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
 
   openGraph: {
-    title: "Riskaa Oktafiani - Website Profil & Portfolio",
+    title: "Riskaa Oktafiani - Website Profil & Portofolio",
     description:
       "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
     type: "website",
