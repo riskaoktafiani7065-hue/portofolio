@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-export const metadata = {
-  title: "Portfolio",
-  description: "My Portfolio",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://portofolio-riska-vert.vercel.app"),
+
+  title: {
+    default: "Riskaa Oktafiani - Website Profil & Portfolio",
+    template: "%s | Riskaa Oktafiani",
+  },
+
+  description:
+    "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
+
+  openGraph: {
+    title: "Riskaa Oktafiani - Website Profil & Portfolio",
+    description:
+      "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
+    type: "website",
+  },
 };
 
 export const viewport = {
