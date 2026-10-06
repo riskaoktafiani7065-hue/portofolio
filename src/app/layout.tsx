@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   description:
     "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
 
+  keywords: [
+    "Riskaa Oktafiani",
+    "Portfolio Riskaa Oktafiani",
+    "Portfolio Siswa",
+    "Rekayasa Perangkat Lunak",
+    "RPL",
+    "Next.js",
+    "Web Development",
+    "Website Portfolio",
+  ],
+
   openGraph: {
     title: "Riskaa Oktafiani - Website Profil & Portofolio",
     description:
@@ -24,7 +35,7 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-}; 
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
