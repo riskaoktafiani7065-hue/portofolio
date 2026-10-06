@@ -3,14 +3,28 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portofolio",
-  description: "My Portofolio",
+  metadataBase: new URL("https://portofolio-riska-vert.vercel.app"),
+
+  title: {
+    default: "Riskaa Oktafiani - Website Profil & Portfolio",
+    template: "%s | Riskaa Oktafiani",
+  },
+
+  description:
+    "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
+
+  openGraph: {
+    title: "Riskaa Oktafiani - Website Profil & Portofolio",
+    description:
+      "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
+    type: "website",
+  },
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-};
+}; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { supabase } from "@/../lib/supabase";
 
@@ -21,6 +22,49 @@ function slugify(text: string) {
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+
+  const { data: projects } = await supabase
+    .from("proyek")
+    .select("*");
+
+  const project = (projects as Project[] | null)?.find(
+    (item) => slugify(item.judul) === id
+  );
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "Project tidak ditemukan.",
+    };
+  }
+
+  return {
+    title: project.judul,
+    description: project.deskripsi,
+    openGraph: {
+      title: project.judul,
+      description: project.deskripsi,
+      type: "article",
+      images: project.image
+        ? [
+            {
+              url: project.image,
+              width: 1200,
+              height: 630,
+              alt: project.judul,
+            },
+          ]
+        : undefined,
+    },
+  };
 }
 
 export default async function ProjectDetail({
