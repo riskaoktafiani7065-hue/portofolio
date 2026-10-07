@@ -33,7 +33,7 @@ export default function Image() {
             fontWeight: 800,
           }}
         >
-          Riska Oktafiani
+          Riskaa Oktafiani
         </div>
 
         <div
