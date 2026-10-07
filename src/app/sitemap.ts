@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .select("judul, created_at")
     .order("id", { ascending: true });
 
-  const baseUrl = "https://www.riska-oktafiani.my.id";
+  const baseUrl = "https://portofolio-riska-vert.vercel.app";
 
   const projectUrls =
     projects?.map((project) => ({
