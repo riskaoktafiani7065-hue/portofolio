@@ -118,11 +118,14 @@ export default function Hero() {
             <div className="mt-8 sm:mt-10 lg:mt-12">
 
               <p className="max-w-3xl border-l-2 border-blue-300 pl-4 text-base leading-7 text-gray-600 sm:pl-6 sm:text-xl sm:leading-8 md:pl-8 md:text-2xl md:leading-9 dark:border-blue-500 dark:text-gray-300">
-                Software Engineering student who is learning and exploring web
-                development, React, Next.js, UI/UX design, and modern web technologies
-                while continuously improving my coding skills.
+
+                Software Engineering student who is still learning and
+                exploring the world of coding. I&apos;m interested in web
+                development, exploring new technologies, and continuously
+                improving my coding skills.
+
               </p>
-              
+
             </div>
 
 

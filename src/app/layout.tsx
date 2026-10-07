@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Riskaa Oktafiani",
   },
 
-  description:
-    "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development, UI/UX design, dan teknologi.",
+  description: "Portfolio Riskaa Oktafiani, siswi SMKN 1 Pasuruan jurusan Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.",
 
   keywords: [
   "Riskaa Oktafiani",
