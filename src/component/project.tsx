@@ -50,7 +50,8 @@ export default function Project() {
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-500 dark:text-gray-400">
           Here are some projects I&apos;ve worked on while learning and
-          exploring web development, UI/UX design, and modern technologies.
+          exploring web development, UI/UX design, Next.js, React, and modern
+          web technologies.
         </p>
 
         {/* SEARCH & FILTER */}
