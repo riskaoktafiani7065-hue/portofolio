@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin/"],
     },
-    sitemap: "https://www.riska-oktafiani.my.id/sitemap.xml",
+    sitemap: "https://portofolio-riska-vert.vercel.app/sitemap.xml",
   };
 }

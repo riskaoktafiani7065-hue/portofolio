@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.riska-oktafiani.my.id"),
+  metadataBase: new URL("https://portofolio-riska-vert.vercel.app"),
 
   title: {
     default: "Riskaa Oktafiani - Website Profil & Portfolio",
