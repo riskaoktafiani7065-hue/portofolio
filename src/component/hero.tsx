@@ -214,7 +214,7 @@ export default function Hero() {
 
             {/* FLOATING AI DECORATION */}
             <div className="pointer-events-none absolute -right-3 top-12 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/70 bg-blue-500/80 text-xl font-black text-white shadow-[0_0_25px_rgba(56,189,248,0.7)] backdrop-blur-md sm:-right-5 sm:h-16 sm:w-16">
-              AI
+              RISS
             </div>
 
             <div className="pointer-events-none absolute -bottom-4 -left-3 flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/90 text-2xl font-bold text-blue-600 shadow-[0_0_25px_rgba(56,189,248,0.5)] sm:-left-5 sm:h-14 sm:w-14">
