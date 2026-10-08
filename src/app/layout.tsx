@@ -42,20 +42,29 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Riskaa Oktafiani - Website Profil & Portfolio",
+    title: "Riskaa Oktafiani - Website Profil & Portofolio",
     description:
-      "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development, UI/UX design, dan teknologi.",
+      "Portofolio Riskaa Oktafiani, siswi SMKN 1 Pasuruan jurusan Rekayasa Perangkat Lunak yang tertarik pada web development, UI/UX design, dan teknologi.",
     url: "https://www.riska-oktafiani.my.id",
-    siteName: "Riskaa Oktafiani Portfolio",
+    siteName: "Riskaa Oktafiani Portofolio",
     locale: "id_ID",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Riskaa Oktafiani - Website Profil & Portofolio",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Riskaa Oktafiani - Website Profil & Portfolio",
+    title: "Riskaa Oktafiani - Website Profil & Portofolio",
     description:
-      "Portfolio Riskaa Oktafiani, siswi Rekayasa Perangkat Lunak yang tertarik pada web development, UI/UX design, dan teknologi.",
+      "Portofolio Riskaa Oktafiani, siswi SMKN 1 Pasuruan jurusan Rekayasa Perangkat Lunak yang tertarik pada web development, UI/UX design, dan teknologi.",
+    images: ["/opengraph-image"],
   },
 
   authors: [
