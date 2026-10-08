@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AIBackground from "@/component/AIBackground";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.riska-oktafiani.my.id"),
@@ -84,12 +85,18 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
+   return (
     <html
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="relative min-h-full flex flex-col">
+        <AIBackground />
+
+        <div className="relative z-10 flex min-h-full flex-1 flex-col">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
